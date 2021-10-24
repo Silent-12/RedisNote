@@ -29,9 +29,8 @@ redis的基本操作，笔记 2021.10.23
 ## 4.字符串操作
 * set 键 值
   * 如果键不存在，就是添加
-  * 键存在，就是修改
-   
-``·
+  * 键存在，就是修改   
+```
 设置用户 123abc
 #添加一个键user 值为123abc
 set user 1111
@@ -39,12 +38,22 @@ set user 1111
 ```
 
 * setex 键 过期时间
-  * 过期时间单位 秒
-  
- ```
+  * 过期时间单位 秒  
+```
  setex user 3 abc
  # 添加一个键user 值为abc 过期时间3秒
+```
+ 
+* 添加多个键值对
+  * mset 键1值1 键2值2 键3值3 
  ```
- 
- 
- 
+mest user1 aaa user2 bbb user3 ccc
+# 同时添加3个键值对
+```
+
+* 追加值
+  * append 键 值
+```
+append user aabbcc
+# 向user键，后追加值aabbcc
+```
